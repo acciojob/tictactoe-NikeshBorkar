@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else if (board.every(cell => cell !== '')) {
                     messageDiv.textContent = 'It\'s a draw!';
                 } else {
-                    currentPlayer = currentPlayer === 'x' ? 'O' : 'x';
+                    currentPlayer = currentPlayer === 'x' ? 'o' : 'x';
                     updateMessage();
                 }
             }
