@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 board[index] = currentPlayer;
                 cell.textContent = currentPlayer;
                 if (checkWin()) {
-                    messageDiv.textContent = `${currentPlayer === 'x' ? player1 : player2} congratulations you won!`;
+                    messageDiv.textContent = `${currentPlayer === 'x' ? "Player1" : "Player2"} congratulations you won!`;
                     cells.forEach(c => c.removeEventListener('click', handleClick));
                 } else if (board.every(cell => cell !== '')) {
                     messageDiv.textContent = 'It\'s a draw!';
