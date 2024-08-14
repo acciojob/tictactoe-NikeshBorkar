@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function updateMessage() {
-        messageDiv.textContent = `${currentPlayer === 'X' ? player1 : player2}, you're up`;
+        messageDiv.textContent = `${currentPlayer === 'x' ? player1 : player2}, you\'re up`;
     }
 
     function checkWin() {
