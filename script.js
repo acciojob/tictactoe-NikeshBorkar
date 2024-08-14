@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const submitButton = document.getElementById('submit');
     const gameDiv = document.getElementById('game');
     const messageDiv = document.querySelector('.message');
-    let currentPlayer = 'X';
+    let currentPlayer = 'x';
     let player1 = '';
     let player2 = '';
     let board = ['', '', '', '', '', '', '', '', ''];
@@ -31,12 +31,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 board[index] = currentPlayer;
                 cell.textContent = currentPlayer;
                 if (checkWin()) {
-                    messageDiv.textContent = `${currentPlayer === 'X' ? player1 : player2} congratulations you won!`;
+                    messageDiv.textContent = `${currentPlayer === 'x' ? player1 : player2} congratulations you won!`;
                     cells.forEach(c => c.removeEventListener('click', handleClick));
                 } else if (board.every(cell => cell !== '')) {
                     messageDiv.textContent = 'It\'s a draw!';
                 } else {
-                    currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+                    currentPlayer = currentPlayer === 'x' ? 'O' : 'x';
                     updateMessage();
                 }
             }
